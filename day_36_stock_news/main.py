@@ -19,23 +19,7 @@ yesterday = today - timedelta(days=1)
 day_after_yesterday = today - timedelta(days=2)
 
 
-# print(stock_data)
-# yesterday_stock_price = (stock_data["Time Series (Daily)"][str(yesterday)]["4. close"])
-# day_after_yesterday_stock_price = (stock_data["Time Series (Daily)"][str(day_after_yesterday)]["4. close"])
-#
-# yesterday_stock_price = float(yesterday_stock_price)
-# print(f"{yesterday_stock_price:.2f}")
-#
-# day_after_yesterday_stock_price = float(day_after_yesterday_stock_price)
-# print(f"{day_after_yesterday_stock_price:.2f}")
-#
 
-## STEP 1: Use https://www.alphavantage.co/documentation/#daily
-# When stock price increase/decreases by 5% between yesterday
-# and the day before yesterday then print("Get News").
-
-#TODO 1. - Get yesterday's closing stock price. Hint: You can perform list
-# comprehensions on Python dictionaries. e.g. [new_value for (key, value) in dictionary.items()]
 
 
 stock_params = {
@@ -105,8 +89,6 @@ if abs(diff_percent) > 1:
     # Instead of printing ("Get News"), actually get the first 3 news pieces for the COMPANY_NAME. 
 
 
-
-
     ## STEP 3: Use twilio.com/docs/sms/quickstart/python
     #to send a separate message with each article's title and description to your phone number. 
 
@@ -114,8 +96,6 @@ if abs(diff_percent) > 1:
 
 
     #TODO 9. - Send each article as a separate message via Twilio.
-
-
 
 #Optional TODO: Format the message like this: 
 """
